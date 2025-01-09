@@ -23,8 +23,8 @@
 &lt;p&gt;To be more specific, what we would like to have is:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A &lt;em&gt;latent prior&lt;/em&gt; $z \sim p(z)$ that can be sampled from. Ideally $p(z)$ is easy for sampling and aggregated computation, e.g., Gaussian distribution.&lt;/li&gt;
-&lt;li&gt;A &lt;em&gt;model&lt;/em&gt;, usually a network parameterized by $\theta$, that takes in a sampled latent variable and outputs the distribution $p_\theta(x \mid z)$.&lt;/li&gt;
-&lt;li&gt;The &lt;em&gt;likelihood&lt;/em&gt; $p_\theta(x)$ for $x$ to be generated is $\int p_\theta(x|z)p(z) , dz$ (Even though this form is straightforward for understanding, it may face difficulty in practical usage). For the model&amp;rsquo;s performance, the target $\prod_{i=1}^N p_\theta(x_i)$ should be maxmized, which is equivalent to maxmizing $\sum_{i=1}^N \log p_\theta(x_i)$.&lt;/li&gt;
+&lt;li&gt;A &lt;em&gt;model&lt;/em&gt;, usually a neural network parameterized by $\theta$, that takes in a sampled latent variable and outputs the distribution $p_\theta(x \mid z)$.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;likelihood&lt;/em&gt; $p_\theta(x)$ for $x$ to be generated is $\int p_\theta(x|z)p(z) , dz$ (Even though this form is straightforward for understanding, it may face difficulty in practical usage). For the model&amp;rsquo;s performance, the target $\prod_{i=1}^N p_\theta(x_i)$ should be maxmized, which is equivalent to maxmizing $\sum_{i=1}^N \log p_\theta(x_i)$, or in another way, $\mathbb{E}&lt;em&gt;{x \sim D} \log p&lt;/em&gt;\theta(x)$.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;variational-auto-encoder&#34;&gt;Variational Auto-Encoder&lt;/h2&gt;
 &lt;p&gt;Directly optimizing under the form of $\int p_\theta(x|z)p(z) , dz$ is infeasible as it involves heavy-load and high-variance Monte Carlo sampling over $p(z)$. To circumvent it, we resort to Bayes&amp;rsquo; theorem:&lt;/p&gt;</description>
