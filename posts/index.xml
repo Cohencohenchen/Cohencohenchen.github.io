@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on From Variational Auto-Encoder to GenAI</title>
-    <link>https://cohencohenchen.github.io/posts/</link>
-    <description>Recent content in Posts on From Variational Auto-Encoder to GenAI</description>
+    <title>Posts on Cohen&#39;s Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Cohen&#39;s Blog</description>
     <image>
-      <title>From Variational Auto-Encoder to GenAI</title>
-      <url>https://cohencohenchen.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://cohencohenchen.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <title>Cohen&#39;s Blog</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Jan 2025 14:17:18 -0800</lastBuildDate>
-    <atom:link href="https://cohencohenchen.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From Variational Auto-Encoder to GenAI</title>
-      <link>https://cohencohenchen.github.io/posts/my-first-post/</link>
+      <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Wed, 08 Jan 2025 14:17:18 -0800</pubDate>
-      <guid>https://cohencohenchen.github.io/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
       <description>&lt;h2 id=&#34;from-a-generative-model-perspective&#34;&gt;From A Generative Model Perspective&lt;/h2&gt;
-&lt;p&gt;A general task for generative model is that given a dataset $D := {X_i \mid i = 1 \text{ to } N}$, the model&amp;rsquo;s output can share the same or similar distribution as the dataset.&lt;/p&gt;
+&lt;p&gt;A general task for the generative model is that given a dataset $D := \{X_i \mid i = 1 \text{ to } N\}$, the model&amp;rsquo;s output can share the same or similar distribution as the dataset.&lt;/p&gt;
 &lt;p&gt;To be more specific, what we would like to have is:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;A &lt;em&gt;latent prior&lt;/em&gt; $z \sim p(z)$ that can be sampled from. Ideally $p(z)$ is easy for sampling and aggregated computation, e.g., Gaussian distribution.&lt;/li&gt;
-&lt;li&gt;A &lt;em&gt;model&lt;/em&gt;, usually a neural network parameterized by $\theta$, that takes in a sampled latent variable and outputs the distribution $p_\theta(x \mid z)$.&lt;/li&gt;
-&lt;li&gt;The &lt;em&gt;likelihood&lt;/em&gt; $p_\theta(x)$ for $x$ to be generated is $\int p_\theta(x|z)p(z) , dz$ (Even though this form is straightforward for understanding, it may face difficulty in practical usage). For the model&amp;rsquo;s performance, the target $\prod_{i=1}^N p_\theta(x_i)$ should be maxmized, which is equivalent to maxmizing $\sum_{i=1}^N \log p_\theta(x_i)$, or in another way, $\mathbb{E}&lt;em&gt;{x \sim D} \log p&lt;/em&gt;\theta(x)$.&lt;/li&gt;
+&lt;li&gt;A &lt;em&gt;&lt;strong&gt;latent prior&lt;/strong&gt;&lt;/em&gt; $z \sim p(z)$ that can be sampled from. Ideally $p(z)$ is easy for sampling and aggregated computation, e.g., Gaussian distribution.&lt;/li&gt;
+&lt;li&gt;A &lt;em&gt;&lt;strong&gt;model&lt;/strong&gt;&lt;/em&gt;, usually a neural network parameterized by $\theta$, that takes in a sampled latent variable and outputs the distribution $p_\theta(x \mid z)$.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;&lt;strong&gt;likelihood&lt;/strong&gt;&lt;/em&gt; $p_\theta(x)$ for $x$ to be generated is $\int p_\theta(x|z)p(z) , dz$ (Even though this form is straightforward for understanding, it may face difficulty in practical usage). For the model&amp;rsquo;s performance, the target $\prod_{i=1}^N p_\theta(x_i)$ should be maxmized, which is equivalent to maxmizing $\sum_{i=1}^N \log p_\theta(x_i)$, or in an averaged way, $\mathbb{E}_{x \sim D} \log p_\theta(x)$.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;variational-auto-encoder&#34;&gt;Variational Auto-Encoder&lt;/h2&gt;
 &lt;p&gt;Directly optimizing under the form of $\int p_\theta(x|z)p(z) , dz$ is infeasible as it involves heavy-load and high-variance Monte Carlo sampling over $p(z)$. To circumvent it, we resort to Bayes&amp;rsquo; theorem:&lt;/p&gt;</description>
