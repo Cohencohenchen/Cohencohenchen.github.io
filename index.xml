@@ -15,9 +15,9 @@
     <atom:link href="https://cohencohenchen.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From Variational Auto-Encoder to GenAI</title>
-      <link>https://cohencohenchen.github.io/posts/my-first-post/</link>
+      <link>https://cohencohenchen.github.io/posts/vae-to-genai/</link>
       <pubDate>Wed, 08 Jan 2025 14:17:18 -0800</pubDate>
-      <guid>https://cohencohenchen.github.io/posts/my-first-post/</guid>
+      <guid>https://cohencohenchen.github.io/posts/vae-to-genai/</guid>
       <description>&lt;h2 id=&#34;from-a-generative-model-perspective&#34;&gt;From A Generative Model Perspective&lt;/h2&gt;
 &lt;p&gt;A general task for the generative model is that given a dataset $D := \{X_i \mid i = 1 \text{ to } N\}$, the model&amp;rsquo;s output can share the same or similar distribution as the dataset.&lt;/p&gt;
 &lt;p&gt;To be more specific, what we would like to have is:&lt;/p&gt;
